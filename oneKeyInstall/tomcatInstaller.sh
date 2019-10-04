@@ -3,7 +3,8 @@
 
 echo "安装Tomcat"
 echo " ————————————————————"
-echo "| author：gaofv      |"
+echo "| author：GuoJiafeng |"
+echo "| company：Baizhi    |"
 echo " ————————————————————"
 
 sleep 3
@@ -17,19 +18,19 @@ rm -rf /home/tomcat
 mkdir /home/tomcat
 
 
-tar -zxvf /opt/install/apache-tomcat-8.5.37.tar.gz -C /home/tomcat
+tar -zxvf /root/app/apache-tomcat-8.5.37.tar.gz -C /home/tomcat
 
 
 echo "开始配置环境变量"
 
 
-echo "export TOMCAT_HOME=/home/tomcat/apache-tomcat-8.5.37" >> /root/.bash_profile
+echo "export TOMCAT_HOME=/home/tomcat/apache-tomcat-8.5.37" >> /root/.bashrc
 
-source /root/.bash_profile
+source /root/.bashrc
 
-echo "export PATH=$PATH:$TOMCAT_HOME/bin" >> /root/.bash_profile
+echo "export PATH=$PATH:$TOMCAT_HOME/bin" >> /root/.bashrc
 
-source /root/.bash_profile
+source /root/.bashrc
 
 sleep 3
 

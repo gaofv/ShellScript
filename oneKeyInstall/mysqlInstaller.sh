@@ -4,7 +4,6 @@ echo "安装Mysql"
 echo " ————————————————————"
 echo "| author：gaofv      |"
 echo " ————————————————————"
-
 # wget -c http://mirrors.linuxeye.com/oneinstack-full.tar.gz && tar xzf oneinstack-full.tar.gz && ./oneinstack/install.sh --db_option 2 --dbinstallmethod 1 --dbrootpwd baizhi --reboot
 echo "卸载原有Mysql"
 sleep 1
