@@ -1,14 +1,14 @@
 #!/usr/bin/env bash
 
-echo "å®‰è£…Java"
-echo " â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”"
-echo "| authorï¼šgaofv      |"
-echo " â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”"
+echo "°²×°Java"
+echo " ¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª"
+echo "| author£ºgaofv      |"
+echo " ¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª"
 
 
 sleep 3
 
-echo "è§£å‹Javaè‡³Homeä¸‹çš„Javaç›®å½•"
+echo "½âÑ¹JavaÖÁHomeÏÂµÄJavaÄ¿Â¼"
 
 rm -rf /home/java/*
 
@@ -17,13 +17,13 @@ mkdir /home/java
 tar -zxvf /opt/install/jdk-8u181-linux-x64.tar.gz -C /home/java
 
 
-echo "è§£å‹å®Œæˆ"
+echo "½âÑ¹Íê³É"
 
 sleep 3
 
-echo "å¼€å§‹é…ç½®ç¯å¢ƒå˜é‡"
+echo "¿ªÊ¼ÅäÖÃ»·¾³±äÁ¿"
 
-echo "è¯·æ³¨æ„ï¼šç¯å¢ƒå˜é‡é…ç½®ä¸ºrootç”¨æˆ·çš„ç¯å¢ƒå˜é‡"
+echo "Çë×¢Òâ£º»·¾³±äÁ¿ÅäÖÃÎªrootÓÃ»§µÄ»·¾³±äÁ¿"
 
 
 echo "export JAVA_HOME=/home/java/jdk1.8.0_181" >> /root/.bash_profile
@@ -36,8 +36,4 @@ source /root/.bash_profile
 
 sleep 3
 
-echo "é…ç½®å®Œæˆ"
-
-
-
-
+echo "ÅäÖÃÍê³É"
