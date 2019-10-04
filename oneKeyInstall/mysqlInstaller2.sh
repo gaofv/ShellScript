@@ -1,19 +1,19 @@
 #!/usr/bin/env bash
 
-echo "°²×°Mysql"
-echo " ¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª"
-echo "| author£ºGuoJiafeng |"
-echo "| company£ºBaizhi    |"
-echo " ¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª"
+echo "å®‰è£…Mysql"
+echo " â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”"
+echo "| authorï¼šGuoJiafeng |"
+echo "| companyï¼šBaizhi    |"
+echo " â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”"
 
 # wget -c http://mirrors.linuxeye.com/oneinstack-full.tar.gz && tar xzf oneinstack-full.tar.gz && ./oneinstack/install.sh --db_option 2 --dbinstallmethod 1 --dbrootpwd baizhi --reboot
-echo "Ğ¶ÔØÔ­ÓĞMysql"
+echo "å¸è½½åŸæœ‰Mysql"
 sleep 1
 
 yum remove -y mysql*
 
 
-echo "Í£Ö¹Mysql·şÎñ"
+echo "åœæ­¢MysqlæœåŠ¡"
 
 service mysql stop
 
@@ -23,7 +23,7 @@ rpm -e --nodeps MySQL-server-5.5.62-1.el6.x86_64
 
 rpm -e --nodeps mysql-libs-5.1.73-8.el6_8.x86_64
 
-echo "É¾³ıÏà¹ØÎÄ¼ş"
+echo "åˆ é™¤ç›¸å…³æ–‡ä»¶"
 rm -rf /var/lock/subsys/mysql
 rm -rf /var/lib/mysql
 rm -rf /var/lib/mysql/mysql
@@ -38,37 +38,37 @@ rm -rf /usr/share/mysql/*
 
 
 
-echo "°²×°ÒÀÀµ»·¾³ perl"
+echo "å®‰è£…ä¾èµ–ç¯å¢ƒ perl"
 sleep 1
 yum install perl
 
 
-echo "¿ªÊ¼°²×°Mysql ¿Í»§¶Ë"
+echo "å¼€å§‹å®‰è£…Mysql å®¢æˆ·ç«¯"
 sleep 1
 
 rpm -ivh /root/app/MySQL-client-5.5.62-1.el6.x86_64.rpm
 
-echo "¿ªÊ¼°²×°Mysql ·şÎñ¶Ë"
+echo "å¼€å§‹å®‰è£…Mysql æœåŠ¡ç«¯"
 sleep 1
 
 rpm -ivh /root/app/MySQL-server-5.5.62-1.el6.x86_64.rpm
 
-echo "È·ÈÏÒÑ¾­¹Ø±Õmysqld_safe½ø³Ì"
+echo "ç¡®è®¤å·²ç»å…³é—­mysqld_safeè¿›ç¨‹"
 
 mysqld_safepid=$( ps | grep mysqld_safe  |  awk '{print $1}')
 
 kill -9 $mysqld_safepid
 
-echo "Æô¶¯mysqld_safe½ø³Ì"
+echo "å¯åŠ¨mysqld_safeè¿›ç¨‹"
 nohup mysqld_safe --skip-grant-table &
 
 sleep 1
 
-echo "mysql ÒÑ¾­Æô¶¯£¡£¬¿ªÊ¼ĞŞ¸ÄÃÜÂë"
+echo "mysql å·²ç»å¯åŠ¨ï¼ï¼Œå¼€å§‹ä¿®æ”¹å¯†ç "
 sleep 1
 
-read -p "ÇëÊäÈëÄúÏëÒªĞŞ¸ÄµÄÃÜÂë£º"  mysqlpass01
-read -p "ÇëÊäÈëENTER¼ÌĞø"
+read -p "è¯·è¾“å…¥æ‚¨æƒ³è¦ä¿®æ”¹çš„å¯†ç ï¼š"  mysqlpass01
+read -p "è¯·è¾“å…¥ENTERç»§ç»­"
 
 
 
@@ -76,12 +76,12 @@ mysql -f mysql -e "UPDATE user SET Password=PASSWORD('${mysqlpass01}') where USE
 
 mysql  -e "flush privileges;"
 
-echo "ÖØÆôMysql"
+echo "é‡å¯Mysql"
 
 service mysql restart
 
 
-echo "Ä¬ÈÏ¿ªÆôÔ¶³ÌÁ¬½ÓÈ¨ÏŞ"
+echo "é»˜è®¤å¼€å¯è¿œç¨‹è¿æ¥æƒé™"
 
 mysql -uroot -p${mysqlpass01}  -e "use mysql;"
 
@@ -93,18 +93,18 @@ mysql -uroot -p${mysqlpass01} -e "flush privileges;"
 
 sleep 1
 
-echo "ÖØÆôMysql"
+echo "é‡å¯Mysql"
 
 service mysql restart
 
-echo "½áÊømysqld_safe½ø³Ì"
+echo "ç»“æŸmysqld_safeè¿›ç¨‹"
 
 mysqld_safepid=$( ps | grep mysqld_safe  |  awk '{print $1}')
 
 kill -9 $mysqld_safepid
 
 
-echo "°²×°Íê³É"
+echo "å®‰è£…å®Œæˆ"
 
 
-echo "ÄúµÄÃÜÂëÎª:${mysqlpass01},ÇëÀÎ¼Ç£¡"
+echo "æ‚¨çš„å¯†ç ä¸º:${mysqlpass01},è¯·ç‰¢è®°ï¼"
